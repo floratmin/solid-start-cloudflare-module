@@ -6,7 +6,7 @@
 		"build": "vinxi build",
 		"start": "vinxi start",
 		"version": "vinxi version",
-		"preview": "pnpm run build && npx wrangler dev",
+		"preview": "pnpm run build && WS_NO_BUFFER_UTIL=true npx wrangler dev .output/server/index.mjs -- --assets .output/public/",
 		"deploy": "pnpm run build && wrangler deploy"
 	},
 	"dependencies": {
